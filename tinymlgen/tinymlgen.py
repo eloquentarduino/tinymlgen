@@ -20,6 +20,10 @@ def port(model, optimize=True, variable_name='model_data', pretty_print=False):
         c = re.sub(r'(0x..?, ){12}', lambda x: '%s\n\t' % x.group(0), c)
     c += '\nconst int %s_len = %d;' % (variable_name, len(bytes))
     preamble = '''
+// if having troubles with min/max, uncomment the following
+// #undef min    
+// #undef max
+
 #ifdef __has_attribute
 #define HAVE_ATTRIBUTE(x) __has_attribute(x)
 #else

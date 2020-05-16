@@ -2,13 +2,13 @@ from distutils.core import setup
 setup(
   name = 'tinymlgen',
   packages = ['tinymlgen'],
-  version = '0.1',
+  version = '0.2',
   license='MIT',
   description = 'Generate C code for microcontrollers from Tensorflow models',
   author = 'Simone Salerno',
   author_email = 'eloquentarduino@gmail.com',
   url = 'https://github.com/eloquentarduino/tinymlgen',
-  download_url = 'https://github.com/eloquentarduino/tinymlgen/archive/v_01.tar.gz',
+  download_url = 'https://github.com/eloquentarduino/tinymlgen/archive/v_02.tar.gz',
   keywords = ['ML', 'microcontrollers', 'tensorflow', 'machine learning'],
   install_requires=[
     'tensorflow',
