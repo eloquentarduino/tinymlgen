@@ -3,7 +3,7 @@ import hexdump
 import tensorflow as tf
 
 
-def port(model, optimize=True, variable_name='model_data', pretty_print=False):
+def port(model, optimize=False, variable_name='model_data', pretty_print=False):
     converter = tf.lite.TFLiteConverter.from_keras_model(model)
     if optimize:
         if isinstance(optimize, bool):
