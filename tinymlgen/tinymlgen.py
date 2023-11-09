@@ -7,7 +7,7 @@ def port(model, optimize=False, variable_name='model_data', pretty_print=False):
     converter = tf.lite.TFLiteConverter.from_keras_model(model)
     if optimize:
         if isinstance(optimize, bool):
-            optimizers = [tf.lite.Optimize.OPTIMIZE_FOR_SIZE]
+            optimizers = [tf.lite.Optimize.DEFAULT]
         else:
             optimizers = optimize
         converter.optimizations = optimizers
